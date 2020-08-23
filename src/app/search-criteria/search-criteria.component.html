@@ -1,1 +1,5 @@
-<p>search-criteria works!</p>
+<form #searchForm="ngForm" (ngSubmit)="searchRecipes(searchForm)">
+  <label for="searchTerm">Search:</label>
+  <input type="text" name="searchTerm" id="searchTerm" ngModel />
+  <button>Submit</button>
+</form>
