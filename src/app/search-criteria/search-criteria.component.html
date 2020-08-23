@@ -1,5 +1,45 @@
 <form #searchForm="ngForm" (ngSubmit)="searchRecipes(searchForm)">
-  <label for="searchTerm">Search:</label>
-  <input type="text" name="searchTerm" id="searchTerm" ngModel />
-  <button>Submit</button>
+	<label for="searchTerm">Search:</label>
+	<input type="text" name="searchTerm" id="searchTerm" ngModel />
+	<fieldset ngModelGroup="dietFieldset">
+		<legend>Dietery Options</legend>
+		<input
+			type="checkbox"
+			name="balanced"
+			value="balanced"
+			ngModel
+		/>Balanced<br />
+		<input
+			type="checkbox"
+			name="high-fiber"
+			value="high-fiber"
+			ngModel
+		/>High-fiber<br />
+		<input
+			type="checkbox"
+			name="high-protein"
+			value="high-protein"
+			ngModel
+		/>High-protein<br />
+		<input
+			type="checkbox"
+			name="low-carb"
+			value="low-carb"
+			ngModel
+		/>Low-carb<br />
+		<input
+			type="checkbox"
+			name="low-fat"
+			value="low-fat"
+			ngModel
+		/>Low-fat<br />
+		<input
+			type="checkbox"
+			name="low-sodium"
+			value="low-sodium"
+			ngModel
+		/>Low-sodium<br />
+	</fieldset>
+
+	<button>Submit</button>
 </form>
