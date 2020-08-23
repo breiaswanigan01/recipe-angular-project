@@ -1,4 +1,4 @@
 <app-header></app-header>
 <app-search-criteria (searchSubmit)="getRecipes($event)"></app-search-criteria>
-<app-recipe-list ></app-recipe-list>
+<app-recipe-list [recipesRef]="recipeArray"></app-recipe-list>
 <app-favorites-page></app-favorites-page>

@@ -1,1 +1,5 @@
-<app-recipe-card></app-recipe-card>
+<ul>
+	<li *ngFor="let r of recipesRef">
+		<app-recipe-card [record]="r"></app-recipe-card>
+	</li>
+</ul>
