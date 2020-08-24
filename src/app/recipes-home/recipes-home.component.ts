@@ -24,19 +24,22 @@ export class RecipesHomeComponent implements OnInit {
     // this.recipeArray = recipes;
     this.route.queryParamMap.subscribe((params) => {
       let term = params.get('term');
-      let dietOptions = params.get('dietLabels');
+      let dietOptions = params.getAll('dietLabels');
       let minCal = params.get('minCal');
       let maxCal = params.get('maxCal');
+    //   console.log(params.getAll("dietOptions"));
       console.log(
         `term : ${term} dietOptions : ${dietOptions}, minCal: ${minCal}, maxCal: ${maxCal}`
       );
       if (minCal !== '' && maxCal !== '') {
         let calorieRange = `${minCal}-${maxCal}`;
         console.log('print calorie range', calorieRange);
-		  this.edamam.getRecipesWithCalories(term, calorieRange).subscribe((response) => {
-			  console.log("subscribe calories", response);
-			  this.recipeArray = response.hits;
-		  });
+        this.edamam
+          .getRecipesWithCalories(term, calorieRange)
+          .subscribe((response) => {
+            console.log('subscribe calories', response);
+            this.recipeArray = response.hits;
+          });
       } else {
         this.edamam.getRecipes(term).subscribe((response) => {
           console.log('*********** ', response);

@@ -1,6 +1,13 @@
 <form #searchForm="ngForm" (ngSubmit)="searchRecipes(searchForm)">
-  <label for="searchTerm">Search:</label>
-  <input required type="text" name="searchTerm" id="searchTerm" ngModel />
+  <label for="searchTerm">Search<sup>*</sup>: </label>
+  <input
+    type="text"
+    name="searchTerm"
+    id="searchTerm"
+    minlength="1"
+    ngModel
+    required
+  />
   <fieldset ngModelGroup="dietFieldset">
     <legend>Dietery Options</legend>
     <input
