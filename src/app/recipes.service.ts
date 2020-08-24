@@ -5,8 +5,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class RecipesService {
   baseUrl: string = 'https://api.edamam.com/search';
-  key: string = 'b81783e4e8c02bddf0a814d3f11b57b8';
-  id: string = '6dda1ca3';
+  key: string = '62810a10d7ad00ff9beda1f3f8312659';
+  id: string = 'dffcf630';
   constructor(private edamam: HttpClient) {}
 
   getRecipes = (searchTerm: string): any => {
@@ -15,13 +15,17 @@ export class RecipesService {
     });
   };
   getRecipesWithCalories = (searchTerm: string, calorieRange: string): any => {
-    console.log("get recipes service call")
+    console.log('get recipes service call');
     return this.edamam.get(this.baseUrl, {
-      params: { app_key: this.key, app_id: this.id, q: searchTerm, calories: calorieRange },
+      params: {
+        app_key: this.key,
+        app_id: this.id,
+        q: searchTerm,
+        calories: calorieRange,
+      },
     });
-  }
+  };
 }
-
 
 // const getRecipesForDietOptions = (
 //   searchTerm: string,

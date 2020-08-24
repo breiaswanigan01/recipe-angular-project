@@ -1,7 +1,7 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { RecipesService } from '../recipes.service';
 import { NgForm } from '@angular/forms';
-import { Recipe, Hit } from '../interfaces/recipe';
+import {  Hit } from '../interfaces/recipe';
 import { Router } from '@angular/router';
 
 @Component({
