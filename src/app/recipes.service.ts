@@ -14,7 +14,14 @@ export class RecipesService {
       params: { app_key: this.key, app_id: this.id, q: searchTerm },
     });
   };
+  getRecipesWithCalories = (searchTerm: string, calorieRange: string): any => {
+    console.log("get recipes service call")
+    return this.edamam.get(this.baseUrl, {
+      params: { app_key: this.key, app_id: this.id, q: searchTerm, calories: calorieRange },
+    });
+  }
 }
+
 
 // const getRecipesForDietOptions = (
 //   searchTerm: string,
