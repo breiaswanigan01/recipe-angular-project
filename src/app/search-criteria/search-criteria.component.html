@@ -1,45 +1,48 @@
 <form #searchForm="ngForm" (ngSubmit)="searchRecipes(searchForm)">
-	<label for="searchTerm">Search:</label>
-	<input type="text" name="searchTerm" id="searchTerm" ngModel />
-	<fieldset ngModelGroup="dietFieldset">
-		<legend>Dietery Options</legend>
-		<input
-			type="checkbox"
-			name="Balanced"
-			value="Balanced"
-			ngModel
-		/>Balanced<br />
-		<input
-			type="checkbox"
-			name="High-Fiber"
-			value="High-Fiber"
-			ngModel
-		/>High-fiber<br />
-		<input
-			type="checkbox"
-			name="High-Protein"
-			value="High-Protein"
-			ngModel
-		/>High-protein<br />
-		<input
-			type="checkbox"
-			name="Low-Carb"
-			value="Low-Carb"
-			ngModel
-		/>Low-carb<br />
-		<input
-			type="checkbox"
-			name="Low-Fat"
-			value="Low-Fat"
-			ngModel
-		/>Low-fat<br />
-		<input
-			type="checkbox"
-			name="Low-Sodium"
-			value="Low-Sodium"
-			ngModel
-		/>Low-sodium<br />
-	</fieldset>
-
-	<button>Submit</button>
+  <label for="searchTerm">Search:</label>
+  <input required type="text" name="searchTerm" id="searchTerm" ngModel />
+  <fieldset ngModelGroup="dietFieldset">
+    <legend>Dietery Options</legend>
+    <input
+      type="checkbox"
+      name="Balanced"
+      value="Balanced"
+      ngModel
+    />Balanced<br />
+    <input
+      type="checkbox"
+      name="High-Fiber"
+      value="High-Fiber"
+      ngModel
+    />High-fiber<br />
+    <input
+      type="checkbox"
+      name="High-Protein"
+      value="High-Protein"
+      ngModel
+    />High-protein<br />
+    <input
+      type="checkbox"
+      name="Low-Carb"
+      value="Low-Carb"
+      ngModel
+    />Low-carb<br />
+    <input
+      type="checkbox"
+      name="Low-Fat"
+      value="Low-Fat"
+      ngModel
+    />Low-fat<br />
+    <input
+      type="checkbox"
+      name="Low-Sodium"
+      value="Low-Sodium"
+      ngModel
+    />Low-sodium<br />
+  </fieldset>
+  <label for="minCalories">Min (kcal):</label>
+  <input type="text" name="minCalories" value="minCalories" ngModel />
+  <label for="maxCalories">Max (kcal):</label>
+  <input type="text" name="maxCalories" value="maxCalories" ngModel />
+  <button>Submit</button>
 </form>
