@@ -16,8 +16,10 @@ export class RecipesService {
   };
 }
 
-const getRecipesForDietOptions = (dietOptions: string): any => {
-  return this.baseUrl.dietOptions.get(this.selectedOptions, {
-    params: { app_key: this.key, app_id: this.id, q: dietOptions },
-  });
-};
+// const getRecipesForDietOptions = (
+//   searchTerm: string,
+//   dietOptions: string
+// ): any => {
+//   let searchResult = this.getRecipes(searchTerm);
+//   searchResult.
+// };

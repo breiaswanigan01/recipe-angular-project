@@ -1,3 +1,7 @@
 export interface Recipe {
-    label: string;
+  label: string;
+  dietLabels: string[];
+}
+export interface Hit {
+  recipe: Recipe;
 }
