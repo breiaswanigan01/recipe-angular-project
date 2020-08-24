@@ -1,45 +1,45 @@
 <form #searchForm="ngForm" (ngSubmit)="searchRecipes(searchForm)">
-  <label for="searchTerm">Search:</label>
-  <input type="text" name="searchTerm" id="searchTerm" ngModel />
-  <fieldset ngModelGroup="dietFieldset">
-    <legend>Dietery Options</legend>
-    <input
-      type="checkbox"
-      name="balanced"
-      value="balanced"
-      ngModel
-    />Balanced<br />
-    <input
-      type="checkbox"
-      name="high-fiber"
-      value="high-fiber"
-      ngModel
-    />High-fiber<br />
-    <input
-      type="checkbox"
-      name="high-protein"
-      value="high-protein"
-      ngModel
-    />High-protein<br />
-    <input
-      type="checkbox"
-      name="low-carb"
-      value="Low-Carb"
-      ngModel
-    />Low-carb<br />
-    <input
-      type="checkbox"
-      name="low-fat"
-      value="low-fat"
-      ngModel
-    />Low-fat<br />
-    <input
-      type="checkbox"
-      name="low-sodium"
-      value="low-sodium"
-      ngModel
-    />Low-sodium<br />
-  </fieldset>
+	<label for="searchTerm">Search:</label>
+	<input type="text" name="searchTerm" id="searchTerm" ngModel />
+	<fieldset ngModelGroup="dietFieldset">
+		<legend>Dietery Options</legend>
+		<input
+			type="checkbox"
+			name="Balanced"
+			value="Balanced"
+			ngModel
+		/>Balanced<br />
+		<input
+			type="checkbox"
+			name="High-Fiber"
+			value="High-Fiber"
+			ngModel
+		/>High-fiber<br />
+		<input
+			type="checkbox"
+			name="High-Protein"
+			value="High-Protein"
+			ngModel
+		/>High-protein<br />
+		<input
+			type="checkbox"
+			name="Low-Carb"
+			value="Low-Carb"
+			ngModel
+		/>Low-carb<br />
+		<input
+			type="checkbox"
+			name="Low-Fat"
+			value="Low-Fat"
+			ngModel
+		/>Low-fat<br />
+		<input
+			type="checkbox"
+			name="Low-Sodium"
+			value="Low-Sodium"
+			ngModel
+		/>Low-sodium<br />
+	</fieldset>
 
-  <button>Submit</button>
+	<button>Submit</button>
 </form>
