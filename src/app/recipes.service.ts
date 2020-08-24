@@ -15,3 +15,11 @@ export class RecipesService {
     });
   };
 }
+
+// const getRecipesForDietOptions = (
+//   searchTerm: string,
+//   dietOptions: string
+// ): any => {
+//   let searchResult = this.getRecipes(searchTerm);
+//   searchResult.
+// };
