@@ -1,0 +1,20 @@
+<section class="recipe-container">
+  <div class="recipe-card">
+    <button class="favorite" (click)="removeFromFavorites(index)">
+      X
+    </button>
+    <h3 class="recipe-label">{{ record.label }}</h3>
+    <a href="{{ record.url }}" target="_blank"
+      ><img
+        class="recipe-image"
+        src="{{ record.image }}"
+        alt="Image of {{ record.label }}"
+    /></a>
+    <p class="recipe-time">
+      Total Time:
+      {{ record.totalTime }} minutes
+    </p>
+    <p class="desktop">Diet: {{ record.dietLabels }}</p>
+    <p class="desktop">Health: {{ record.healthLabels }}</p>
+  </div>
+</section>

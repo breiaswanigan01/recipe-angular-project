@@ -10,6 +10,7 @@ import { FavoritesPageComponent } from './favorites-page/favorites-page.componen
 import { HeaderComponent } from './header/header.component';
 import { RecipeCardComponent } from './recipe-card/recipe-card.component';
 import { RecipesHomeComponent } from './recipes-home/recipes-home.component';
+import { FavoriteCardComponent } from './favorite-card/favorite-card.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { RecipesHomeComponent } from './recipes-home/recipes-home.component';
     HeaderComponent,
     RecipeCardComponent,
     RecipesHomeComponent,
+    FavoriteCardComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

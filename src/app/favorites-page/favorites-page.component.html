@@ -1,1 +1,10 @@
-<p>favorites-page works!</p>
+<app-header></app-header>
+<ul class="unordered-list">
+  <li *ngFor="let f of favoriteRecipes; index as i" class="list-item">
+    <app-favorite-card
+      [record]="f.recipe"
+      [index]="i"
+      (remove)="removeFromFavorites(i)"
+    ></app-favorite-card>
+  </li>
+</ul>
