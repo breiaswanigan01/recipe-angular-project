@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
+import { Recipe } from "./interfaces/recipe";
 @Injectable({
 	providedIn: "root",
 })
@@ -7,6 +8,7 @@ export class RecipesService {
 	baseUrl: string = "https://api.edamam.com/search";
 	key: string = "62810a10d7ad00ff9beda1f3f8312659";
 	id: string = "dffcf630";
+	favorites: Recipe[] = [];
 	constructor(private edamam: HttpClient) {}
 
 	getRecipes = (searchTerm: string): any => {
@@ -37,6 +39,15 @@ export class RecipesService {
 				diet: diet.toLowerCase(),
 			},
 		});
+	};
+
+	addToFavorites = (recipe: Recipe) => {
+		this.favorites.unshift(recipe);
+		console.log(this.favorites);
+	};
+
+	getFavorites = () => {
+		return this.favorites;
 	};
 }
 
