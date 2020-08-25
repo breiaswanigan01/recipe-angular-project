@@ -1,0 +1,24 @@
+.header {
+  background-color: #6f6866;
+  padding: 5px;
+  margin: 10px;
+  display: flex;
+}
+
+.recipe {
+  color: #9caea9;
+  font-family: "Roboto", sans-serif;
+
+  justify-content: space-between;
+}
+.img {
+  width: 15%;
+}
+.list {
+  font-family: "Roboto", sans-serif;
+  color: #9caea9;
+  text-decoration: none;
+}
+.lists {
+  list-style: none;
+}
