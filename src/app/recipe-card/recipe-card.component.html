@@ -5,7 +5,7 @@
       YUM!
     </button>
     <!-- change to magnifying class  -->
-    <button class="favorite" (click)="toggle(showFlag)">
+    <button class="favorite" (click)="showDetails()">
       Quick View
     </button>
     <h3 class="recipe-label">{{ record.label }}</h3>
@@ -24,26 +24,17 @@
     <p class="desktop">Health: {{ record.healthLabels }}</p>
   </div>
 </section>
-<section *ngIf="showFlag === true">
-  <div>
-    <h3 class="recipe-label">{{ record.label }}</h3>
-    <a href="{{ record.url }}" target="_blank"
-      ><img
-        class="recipe-image"
-        src="{{ record.image }}"
-        alt="Image of {{ record.label }}"
-    /></a>
-    <p class="recipe-time">
-      Total Time:
-      {{ record.totalTime }} minutes
-    </p>
-    <p class="desktop">Diet: {{ record.dietLabels }}</p>
-    <p class="desktop">Health: {{ record.healthLabels }}</p>
-    <ul>
-      <h4>Ingredients:</h4>
-      <li *ngFor="let line of record.ingredientLines" class="desktop">
-        {{ line }}
-      </li>
-    </ul>
-  </div>
-</section>
+<!-- <section class="quick-view-container" *ngIf="showFlag === true">
+  <button class="close">X</button>
+  <h3 class="recipe-label">{{ record.label }}</h3>
+  <p class="recipe-time">
+    Total Time:
+    {{ record.totalTime }} minutes
+  </p>
+  <ul class="ingredients-list">
+    <h4>Ingredients:</h4>
+    <li *ngFor="let line of record.ingredientLines">
+      {{ line }}
+    </li>
+  </ul>
+</section> -->

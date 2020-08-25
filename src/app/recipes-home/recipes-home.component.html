@@ -1,3 +1,23 @@
 <app-header></app-header>
 <app-search-criteria (searchSubmit)="getRecipes()"></app-search-criteria>
-<app-recipe-list [recipesRef]="recipeArray"></app-recipe-list>
+<app-recipe-list
+  [recipesRef]="recipeArray"
+  (quickView)="setShowIndex($event)"
+></app-recipe-list>
+<section class="quick-view-container" *ngIf="showIndex >= 0">
+  <div class="quick-view">
+    <p>Placeholder</p>
+    <button class="close">X</button>
+    <h3 class="recipe-label">{{ recipeArray[showIndex].recipe.label }}</h3>
+    <p class="recipe-time">
+      Total Time:
+      {{ recipeArray[showIndex].recipe.totalTime }} minutes
+    </p>
+    <!-- <ul class="ingredients-list">
+        <h4>Ingredients:</h4>
+        <li *ngFor="let line of record.ingredientLines">
+            {{ line }}
+        </li>
+    </ul> -->
+  </div>
+</section>
