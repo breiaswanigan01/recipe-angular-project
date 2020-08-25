@@ -1,5 +1,24 @@
+<<<<<<< HEAD
 /* You can add global styles to this file, and also import other style files */
 body {
   font-family: "Open Sans", sans-serif;
   font-family: "Roboto", sans-serif;
+=======
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+form,
+section {
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  background-color: #white;
+  font-family: "Open Sans", sans-serif;
+>>>>>>> 74b4f13a1dcedde2480590768feddb33a0e65267
 }
