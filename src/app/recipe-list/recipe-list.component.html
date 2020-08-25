@@ -1,5 +1,5 @@
-<ul>
-	<li *ngFor="let r of recipesRef">
-		<app-recipe-card [record]="r"></app-recipe-card>
-	</li>
+<ul class="unordered-list">
+  <li *ngFor="let r of recipesRef" class="list-item">
+    <app-recipe-card [record]="r.recipe"></app-recipe-card>
+  </li>
 </ul>
