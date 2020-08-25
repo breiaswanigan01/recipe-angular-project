@@ -1,6 +1,8 @@
 <section class="recipe-container">
   <div class="recipe-card">
-    <button class="favorite">YUM!</button>
+    <button class="favorite" (click)="addToFavorites()" [indexRef]="index">
+      YUM!
+    </button>
     <h3 class="recipe-label">{{ record.label }}</h3>
     <a href="{{ record.url }}" target="_blank"
       ><img
