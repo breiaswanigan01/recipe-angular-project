@@ -1,93 +1,93 @@
 <section class="search-form-container">
-  <form
-    #searchForm="ngForm"
-    (ngSubmit)="searchRecipes(searchForm)"
-    class="search-form"
-  >
-    <div class="text-input">
-      <label for="searchTerm" class="label">Search<sup>*</sup>: </label>
-      <input
-        type="text"
-        name="searchTerm"
-        id="searchTerm"
-        placeholder="required"
-        class="search-input input"
-        minlength="1"
-        ngModel
-        required
-      />
-    </div>
-    <fieldset class="diet-options">
-      <legend class="legend">Dietary Options</legend>
-      <input
-        type="radio"
-        name="dietOption"
-        value="None"
-        ngModel
-        [checked]
-      />None<br />
-      <input
-        type="radio"
-        name="dietOption"
-        value="Balanced"
-        ngModel
-      />Balanced<br />
-      <input
-        type="radio"
-        name="dietOption"
-        value="High-Fiber"
-        ngModel
-      />High-fiber<br />
-      <input
-        type="radio"
-        name="dietOption"
-        value="High-Protein"
-        ngModel
-      />High-protein<br />
-      <input
-        type="radio"
-        name="dietOption"
-        value="Low-Carb"
-        ngModel
-      />Low-carb<br />
-      <input
-        type="radio"
-        name="dietOption"
-        value="Low-Fat"
-        ngModel
-      />Low-fat<br />
-      <input
-        type="radio"
-        name="dietOption"
-        value="Low-Sodium"
-        ngModel
-      />Low-sodium<br />
-    </fieldset>
-    <p class="calories-p">Calorie Range</p>
-    <div class="calories-inputs">
-      <div class="min-cal">
-        <label for="minCalories" class="label">Min: </label>
-        <input
-          type="number"
-          name="minCalories"
-          value="minCalories"
-          placeholder="(kcal)"
-          class="input"
-          ngModel
-        />
-      </div>
-      <div class="max-cal">
-        <label for="maxCalories" class="label">Max: </label>
-        <input
-          type="number"
-          name="maxCalories"
-          value="maxCalories"
-          placeholder="(kcal)"
-          class="input"
-          ngModel
-        />
-      </div>
-    </div>
-    <button class="submit">Submit</button>
-  </form>
+	<form
+		#searchForm="ngForm"
+		(ngSubmit)="searchRecipes(searchForm)"
+		class="search-form"
+	>
+		<div class="text-input">
+			<label for="searchTerm" class="label">Search<sup>*</sup>: </label>
+			<input
+				type="text"
+				name="searchTerm"
+				id="searchTerm"
+				placeholder="required"
+				class="search-input input"
+				minlength="1"
+				ngModel
+				required
+			/>
+		</div>
+		<fieldset class="diet-options">
+			<legend class="legend">Dietary Options</legend>
+			<input
+				type="radio"
+				name="dietOption"
+				value="None"
+				ngModel
+				checked
+			/>None<br />
+			<input
+				type="radio"
+				name="dietOption"
+				value="Balanced"
+				ngModel
+			/>Balanced<br />
+			<input
+				type="radio"
+				name="dietOption"
+				value="High-Fiber"
+				ngModel
+			/>High-fiber<br />
+			<input
+				type="radio"
+				name="dietOption"
+				value="High-Protein"
+				ngModel
+			/>High-protein<br />
+			<input
+				type="radio"
+				name="dietOption"
+				value="Low-Carb"
+				ngModel
+			/>Low-carb<br />
+			<input
+				type="radio"
+				name="dietOption"
+				value="Low-Fat"
+				ngModel
+			/>Low-fat<br />
+			<input
+				type="radio"
+				name="dietOption"
+				value="Low-Sodium"
+				ngModel
+			/>Low-sodium<br />
+		</fieldset>
+		<p class="calories-p">Calorie Range</p>
+		<div class="calories-inputs">
+			<div class="min-cal">
+				<label for="minCalories" class="label">Min: </label>
+				<input
+					type="number"
+					name="minCalories"
+					value="minCalories"
+					placeholder="(kcal)"
+					class="input"
+					ngModel
+				/>
+			</div>
+			<div class="max-cal">
+				<label for="maxCalories" class="label">Max: </label>
+				<input
+					type="number"
+					name="maxCalories"
+					value="maxCalories"
+					placeholder="(kcal)"
+					class="input"
+					ngModel
+				/>
+			</div>
+		</div>
+		<button class="submit" [disabled]="searchForm.invalid">Submit</button>
+	</form>
 </section>

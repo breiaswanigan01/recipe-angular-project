@@ -1,5 +1,8 @@
 <ul class="unordered-list">
-  <li *ngFor="let r of recipesRef; index as i" class="list-item">
-    <app-recipe-card [record]="r.recipe" [indexRef]="i"></app-recipe-card>
-  </li>
+	<li *ngFor="let r of recipesRef" class="list-item">
+		<app-recipe-card
+			[record]="r.recipe"
+			(favorite)="addToFavorites(r)"
+		></app-recipe-card>
+	</li>
 </ul>
