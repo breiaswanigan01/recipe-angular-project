@@ -12,6 +12,7 @@ export class RecipeCardComponent implements OnInit {
   @Input() record: Recipe;
   @Input() favoriteArray: Hit;
   @Output() favorite = new EventEmitter<void>();
+  @Output() quickView = new EventEmitter<void>();
 
   showFlag: boolean = false;
 
@@ -26,5 +27,9 @@ export class RecipeCardComponent implements OnInit {
   ngOnInit(): void {}
   toggle = (showFlag: boolean) => {
     this.showFlag = !showFlag;
+  };
+
+  showDetails = () => {
+    this.quickView.emit();
   };
 }
