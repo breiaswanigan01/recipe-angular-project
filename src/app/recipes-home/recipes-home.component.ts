@@ -39,7 +39,7 @@ export class RecipesHomeComponent implements OnInit {
 			console.log(
 				`term : ${term} dietOptions : ${diet}, minCal: ${minCal}, maxCal: ${maxCal}`
 			);
-			if (maxCal > 0 && diet.length === 0) {
+			if (maxCal > 0 && diet.join("").trim().length === 0) {
 				let calorieRange = `${minCal}-${maxCal}`;
 				console.log("print calorie range", calorieRange);
 				this.edamam.getRecipesWithCalories(term, calorieRange).subscribe(

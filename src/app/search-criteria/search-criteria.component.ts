@@ -43,11 +43,14 @@ export class SearchCriteriaComponent implements OnInit {
 	getSelectedDietOptions(dietOptionObj: any) {
 		let selectedOptions: string[] = [];
 		for (const [key, value] of Object.entries(dietOptionObj)) {
-			console.log(`${key}: ${value}`);
+			// console.log(`${key}: ${value}`);
 			if (value) {
+				console.log(`pushed ${key}: ${value}`);
 				selectedOptions.push(key);
 			}
 		}
+		console.log(`selectedOptions {{selectedOptions}}`);
+		console.log(`selectedOptions length {{selectedOptions.length}}`);
 		return selectedOptions;
 	}
 }
