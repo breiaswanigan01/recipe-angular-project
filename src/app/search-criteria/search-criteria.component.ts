@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from "@angular/core";
+import { Component, OnInit, EventEmitter, Output, Input } from "@angular/core";
 import { RecipesService } from "../recipes.service";
 import { NgForm } from "@angular/forms";
 import { Hit } from "../interfaces/recipe";
@@ -13,6 +13,7 @@ export class SearchCriteriaComponent implements OnInit {
 	@Output() searchSubmit = new EventEmitter<Hit[]>();
 
 	searchResult: Hit[] = [];
+	@Input() errorMsg: string = "";
 
 	constructor(private service: RecipesService, private router: Router) {}
 
