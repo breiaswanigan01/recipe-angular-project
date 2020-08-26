@@ -1,103 +1,103 @@
 <section class="search-form-container">
-	<form
-		#searchForm="ngForm"
-		(ngSubmit)="searchRecipes(searchForm)"
-		class="search-form"
-	>
-		<div class="text-input">
-			<label for="searchTerm" class="label"
-				>Search<sup class="red">*</sup>:
-			</label>
-			<input
-				type="text"
-				name="searchTerm"
-				id="searchTerm"
-				placeholder="Please enter keyword"
-				class="search-input"
-				minlength="1"
-				ngModel
-				#searchTerm="ngModel"
-				required
-			/>
-		</div>
-		<br />
-		<div
-			*ngIf="searchTerm.invalid && (searchTerm.dirty || searchTerm.touched)"
-			class="alert alert-danger"
-		>
-			<div *ngIf="searchTerm.errors.required" class="error">
-				Search text is required.
-			</div>
-		</div>
-		<fieldset ngModelGroup="dietOptions" class="diet-options">
-			<legend class="legend">Dietary Options</legend>
-			<div class="check1">
-				<input
-					type="checkbox"
-					name="balanced"
-					value="balanced"
-					ngModel
-				/>Balanced<br />
-				<input
-					type="checkbox"
-					name="high-fiber"
-					value="high-fiber"
-					ngModel
-				/>High-fiber<br />
-				<input
-					type="checkbox"
-					name="high-protein"
-					value="high-protein"
-					ngModel
-				/>High-protein<br />
-			</div>
-			<div class="ckeck2">
-				<input
-					type="checkbox"
-					name="low-carb"
-					value="low-carb"
-					ngModel
-				/>Low-carb<br />
-				<input
-					type="checkbox"
-					name="low-fat"
-					value="low-fat"
-					ngModel
-				/>Low-fat<br />
-				<input
-					type="checkbox"
-					name="low-sodium"
-					value="low-sodium"
-					ngModel
-				/>Low-sodium<br />
-			</div>
-		</fieldset>
-		<div class="error">{{ errorMsg }}</div>
-		<p class="calories-p">Calorie Range</p>
-		<div class="calories-inputs">
-			<div class="min-cal">
-				<label for="minCalories" class="label">Min: </label>
-				<input
-					type="number"
-					name="minCalories"
-					value="minCalories"
-					placeholder="(kcal)"
-					class="input"
-					ngModel
-				/>
-			</div>
-			<div class="max-cal">
-				<label for="maxCalories" class="label">Max: </label>
-				<input
-					type="number"
-					name="maxCalories"
-					value="maxCalories"
-					placeholder="(kcal)"
-					class="input"
-					ngModel
-				/>
-			</div>
-		</div>
-		<button class="submit" [disabled]="searchForm.invalid">Submit</button>
-	</form>
+  <form
+    #searchForm="ngForm"
+    (ngSubmit)="searchRecipes(searchForm)"
+    class="search-form"
+  >
+    <div class="text-input">
+      <label for="searchTerm" class="label"
+        >Search<sup class="red">*</sup>:
+      </label>
+      <input
+        type="text"
+        name="searchTerm"
+        id="searchTerm"
+        placeholder="Please enter keyword"
+        class="search-input"
+        minlength="1"
+        ngModel
+        #searchTerm="ngModel"
+        required
+      />
+    </div>
+    <br />
+    <div
+      *ngIf="searchTerm.invalid && (searchTerm.dirty || searchTerm.touched)"
+      class="alert alert-danger"
+    >
+      <div *ngIf="searchTerm.errors.required" class="error">
+        Search text is required.
+      </div>
+    </div>
+    <fieldset ngModelGroup="dietOptions" class="diet-options">
+      <legend class="legend">Dietary Options</legend>
+      <div class="check1">
+        <input
+          type="checkbox"
+          name="balanced"
+          value="balanced"
+          ngModel
+        />Balanced<br />
+        <input
+          type="checkbox"
+          name="high-fiber"
+          value="high-fiber"
+          ngModel
+        />High-fiber<br />
+        <input
+          type="checkbox"
+          name="high-protein"
+          value="high-protein"
+          ngModel
+        />High-protein<br />
+      </div>
+      <div class="check2">
+        <input
+          type="checkbox"
+          name="low-carb"
+          value="low-carb"
+          ngModel
+        />Low-carb<br />
+        <input
+          type="checkbox"
+          name="low-fat"
+          value="low-fat"
+          ngModel
+        />Low-fat<br />
+        <input
+          type="checkbox"
+          name="low-sodium"
+          value="low-sodium"
+          ngModel
+        />Low-sodium<br />
+      </div>
+    </fieldset>
+    <div class="error">{{ errorMsg }}</div>
+    <p class="calories-p">Calorie Range</p>
+    <div class="calories-inputs">
+      <div class="min-cal">
+        <label for="minCalories" class="label">Min: </label>
+        <input
+          type="number"
+          name="minCalories"
+          value="minCalories"
+          placeholder="(kcal)"
+          class="input"
+          ngModel
+        />
+      </div>
+      <div class="max-cal">
+        <label for="maxCalories" class="label">Max: </label>
+        <input
+          type="number"
+          name="maxCalories"
+          value="maxCalories"
+          placeholder="(kcal)"
+          class="input"
+          ngModel
+        />
+      </div>
+    </div>
+    <button class="submit" [disabled]="searchForm.invalid">Submit</button>
+  </form>
 </section>

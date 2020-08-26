@@ -87,4 +87,7 @@
     justify-content: flex-start;
     margin: 10px;
   }
+  .buttons-container {
+    margin-top: 10px;
+  }
 }

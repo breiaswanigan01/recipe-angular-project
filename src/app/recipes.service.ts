@@ -19,6 +19,8 @@ export class RecipesService {
 
   getRecipesWithCalories = (searchTerm: string, calorieRange: string): any => {
     console.log('get recipes service call');
+    let url = ` {{}this.baseUrl}?app_key={{this.key}}&app_id={{this.id}}&q={{searchTerm}}&diet={{diet.toLowerCase()}}`;
+    console.log(url);
     return this.edamam.get(this.baseUrl, {
       params: {
         app_key: this.key,
