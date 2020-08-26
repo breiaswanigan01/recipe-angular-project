@@ -22,60 +22,31 @@ export class SearchCriteriaComponent implements OnInit {
 		console.log("Inside form ");
 		console.log(form);
 
+		console.log("====== ", form.value.dietOptions);
+
+		let dietOptionsSelected = this.getSelectedDietOptions(
+			form.value.dietOptions
+		);
+		console.log("Checked diet options are ", dietOptionsSelected.join());
+
 		this.router.navigate(["search"], {
 			queryParams: {
 				term: form.value.searchTerm,
-				diet: form.value.dietOption,
+				diet: dietOptionsSelected.join(),
 				minCal: form.value.minCalories,
 				maxCal: form.value.maxCalories,
 			},
 		});
-
-		// 1. Search by text
-		// let searchTerm = form.value.searchTerm;
-		// let dietOptions = form.value.dietFieldset;
-		// let dietOptionsSelected = this.getSelectedDietOptions(dietOptions);
-		// console.log("Checked diet options are ", dietOptionsSelected);
-
-		// this.service.getRecipes(searchTerm).subscribe((response) => {
-		// 	this.searchResult = response.hits;
-		// });
-
-		// console.log("SearchResult =========  ", this.searchResult);
-		// let filterArray: Hit[] = [];
-		// if (dietOptionsSelected.length > 0) {
-		// 	for (let hit of this.searchResult) {
-		// 		// console.log("***#1$", hit);
-		// 		if (hit.recipe.dietLabels.length > 0) {
-		// 			for (let option of dietOptionsSelected) {
-		// 				// console.log(
-		// 				// 	"***#2$",
-		// 				// 	option,
-		// 				// 	" $$$  hit.recipe.dietLabels ",
-		// 				// 	hit.recipe.dietLabels
-		// 				// );
-		// 				if (hit.recipe.dietLabels.includes(option)) {
-		// 					console.log("$", hit);
-		// 					filterArray.push(hit);
-		// 				}
-		// 			}
-		// 		}
-		// 	}
-		// 	console.log(filterArray);
-		// 	this.searchSubmit.emit(filterArray);
-		// } else {
-		// 	this.searchSubmit.emit(this.searchResult);
-		// }
 	};
-	// this method returns the array of checked options from the diet object
-	// getSelectedDietOptions(dietOptionObj: any) {
-	// 	let selectedOptions: string[] = [];
-	// 	for (const [key, value] of Object.entries(dietOptionObj)) {
-	// 		console.log(`${key}: ${value}`);
-	// 		if (value) {
-	// 			selectedOptions.push(key);
-	// 		}
-	// 	}
-	// 	return selectedOptions;
-	// }
+
+	getSelectedDietOptions(dietOptionObj: any) {
+		let selectedOptions: string[] = [];
+		for (const [key, value] of Object.entries(dietOptionObj)) {
+			console.log(`${key}: ${value}`);
+			if (value) {
+				selectedOptions.push(key);
+			}
+		}
+		return selectedOptions;
+	}
 }
