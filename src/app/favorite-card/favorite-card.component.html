@@ -1,9 +1,13 @@
 <section class="recipe-container">
   <div class="recipe-card">
-    <button class="favorite" (click)="removeFromFavorites(index)">
-      X
-    </button>
-    <h3 class="recipe-label">{{ record.label }}</h3>
+    <div class="buttons-container">
+      <button class="button quick" (click)="showDetails()">pageview</button>
+      <h3 class="recipe-label">{{ record.label }}</h3>
+      <button class="button favorite" (click)="removeFromFavorites(index)">
+        close
+      </button>
+    </div>
+
     <a href="{{ record.url }}" target="_blank"
       ><img
         class="recipe-image"
@@ -14,7 +18,7 @@
       Total Time:
       {{ record.totalTime }} minutes
     </p>
-    <p class="desktop">Diet: {{ record.dietLabels }}</p>
-    <p class="desktop">Health: {{ record.healthLabels }}</p>
+    <!-- <p class="desktop">Diet: {{ record.dietLabels }}</p>
+    <p class="desktop">Health: {{ record.healthLabels }}</p> -->
   </div>
 </section>

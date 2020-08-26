@@ -6,18 +6,34 @@
 ></app-recipe-list>
 <section class="quick-view-container" *ngIf="showIndex >= 0">
   <div class="quick-view">
-    <p>Placeholder</p>
-    <button class="close">X</button>
-    <h3 class="recipe-label">{{ recipeArray[showIndex].recipe.label }}</h3>
-    <p class="recipe-time">
-      Total Time:
-      {{ recipeArray[showIndex].recipe.totalTime }} minutes
-    </p>
-    <!-- <ul class="ingredients-list">
-        <h4>Ingredients:</h4>
-        <li *ngFor="let line of record.ingredientLines">
+    <div class="heading">
+      <h2 class="recipe-label">
+        {{ recipeArray[showIndex].recipe.label }}
+      </h2>
+      <button class="close button" (click)="closeView()">close</button>
+    </div>
+    <div class="recipe-information">
+      <div class="desktop">
+        <img
+          class="image"
+          src="{{ recipeArray[showIndex].recipe.image }}"
+          alt="Image of {{ recipeArray[showIndex].recipe.label }}"
+        />
+      </div>
+      <div class="recipe-details">
+        <p class="recipe-time">
+          Total Time:
+          {{ recipeArray[showIndex].recipe.totalTime }} minutes
+        </p>
+        <ul class="ingredients-list">
+          <h4>Ingredients:</h4>
+          <li
+            *ngFor="let line of recipeArray[showIndex].recipe.ingredientLines"
+          >
             {{ line }}
-        </li>
-    </ul> -->
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>

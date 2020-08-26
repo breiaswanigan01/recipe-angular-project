@@ -19,14 +19,28 @@
   border-radius: 5px;
   border: 1px solid #9caea9;
 }
-.favorite {
-  align-self: flex-end;
-  margin: 0;
-  padding: 5px;
+.buttons-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.button {
+  margin: 0 5px 0 5px;
+  height: 30px;
+  width: 30px;
   background-color: salmon;
   color: white;
   border: white;
+  font-family: "Material Icons";
+  font-size: 16px;
 }
+
+/* .favorite {
+  align-self: flex-end;
+}
+.quick {
+  align-self: flex-start;
+} */
 .recipe-label {
   text-align: center;
   color: #38302e;
