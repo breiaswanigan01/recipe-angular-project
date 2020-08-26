@@ -1,23 +1,24 @@
 .header {
-  background-color: #6f6866;
+  background-color: #ccdad1;
   padding: 5px;
-  margin: 10px;
+  margin: 0 auto;
+  height: 150px;
   display: flex;
+  justify-content: center;
 }
 
-.recipe {
-  color: #9caea9;
-  font-family: "Roboto", sans-serif;
-
-  justify-content: space-between;
-}
 .img {
-  width: 15%;
+  height: 100%;
+  width: auto;
+  margin: 0 auto;
 }
 .list {
   font-family: "Roboto", sans-serif;
-  color: #9caea9;
+  color: #38302e;
   text-decoration: none;
+  padding: 15px;
+  display: flex;
+  height: 80%;
 }
 .lists {
   list-style: none;
