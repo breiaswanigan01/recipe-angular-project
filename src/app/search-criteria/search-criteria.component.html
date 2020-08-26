@@ -17,49 +17,43 @@
 				required
 			/>
 		</div>
-		<fieldset class="diet-options">
+		<fieldset ngModelGroup="dietOptions" class="diet-options">
 			<legend class="legend">Dietary Options</legend>
+
 			<input
-				type="radio"
-				name="dietOption"
-				value="None"
-				ngModel
-				checked
-			/>None<br />
-			<input
-				type="radio"
-				name="dietOption"
-				value="Balanced"
+				type="checkbox"
+				name="balanced"
+				value="balanced"
 				ngModel
 			/>Balanced<br />
 			<input
-				type="radio"
-				name="dietOption"
-				value="High-Fiber"
+				type="checkbox"
+				name="high-fiber"
+				value="high-fiber"
 				ngModel
 			/>High-fiber<br />
 			<input
-				type="radio"
-				name="dietOption"
-				value="High-Protein"
+				type="checkbox"
+				name="high-protein"
+				value="high-protein"
 				ngModel
 			/>High-protein<br />
 			<input
-				type="radio"
-				name="dietOption"
-				value="Low-Carb"
+				type="checkbox"
+				name="low-carb"
+				value="low-carb"
 				ngModel
 			/>Low-carb<br />
 			<input
-				type="radio"
-				name="dietOption"
-				value="Low-Fat"
+				type="checkbox"
+				name="low-fat"
+				value="low-fat"
 				ngModel
 			/>Low-fat<br />
 			<input
-				type="radio"
-				name="dietOption"
-				value="Low-Sodium"
+				type="checkbox"
+				name="low-sodium"
+				value="low-sodium"
 				ngModel
 			/>Low-sodium<br />
 		</fieldset>
