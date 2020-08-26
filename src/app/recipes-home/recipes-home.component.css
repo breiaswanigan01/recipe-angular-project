@@ -1,3 +1,6 @@
+.desktop {
+  display: none;
+}
 .quick-view-container {
   display: flex;
   justify-content: center;
@@ -9,10 +12,58 @@
   left: 0;
   background-color: rgba(0, 0, 0, 0.3);
 }
-
+.recipe-label {
+  font-family: "Roboto";
+  font-weight: 700;
+}
+.recipe-details {
+  padding-left: 15px;
+}
 .quick-view {
   width: 80%;
+  height: 50%;
+  border-radius: 5px;
   background-color: white;
   display: flex;
   flex-direction: column;
+  overflow: scroll;
+}
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.recipe-information {
+  align-items: center;
+  height: 430px;
+}
+.ingredients-list {
+  padding: 20px;
+}
+.button {
+  margin: 5px;
+  padding: 5px;
+  background-color: salmon;
+  color: white;
+  border: white;
+  font-family: "Material Icons";
+  font-size: 16px;
+  align-self: flex-end;
+}
+.image {
+  margin: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .desktop {
+    display: inline;
+  }
+  .recipe-information {
+    display: flex;
+  }
+  .recipe-details {
+    margin: 20px;
+  }
 }

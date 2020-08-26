@@ -5,6 +5,25 @@
       [record]="f.recipe"
       [index]="i"
       (remove)="removeFromFavorites(i)"
+      (quickView)="showDetails(i)"
     ></app-favorite-card>
   </li>
 </ul>
+<section class="quick-view-container" *ngIf="showIndex >= 0">
+  <div class="quick-view">
+    <div class="heading">
+      <h3 class="recipe-label">{{ recipeArray[showIndex].recipe.label }}</h3>
+      <button class="close button" (click)="closeView()">close</button>
+    </div>
+    <p class="recipe-time">
+      Total Time:
+      {{ recipeArray[showIndex].recipe.totalTime }} minutes
+    </p>
+    <ul class="ingredients-list">
+      <h4>Ingredients:</h4>
+      <li *ngFor="let line of recipeArray[showIndex].recipe.ingredientLines">
+        {{ line }}
+      </li>
+    </ul>
+  </div>
+</section>
